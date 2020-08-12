@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">SCV</string>
+    <string name="repairs_title">Repairs</string>
+    <string name="repair_fab_content_desc">Repair Actions</string>
+    fab_content_desc
 </resources>
