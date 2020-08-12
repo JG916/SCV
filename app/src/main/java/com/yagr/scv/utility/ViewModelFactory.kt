@@ -6,6 +6,7 @@ import androidx.lifecycle.AbstractSavedStateViewModelFactory
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.savedstate.SavedStateRegistryOwner
+import com.yagr.scv.createrepair.CreateRepairViewModel
 import com.yagr.scv.repairlist.RepairListViewModel
 
 @Suppress("UNCHECKED_CAST")
@@ -23,6 +24,8 @@ class ViewModelFactory constructor(
         when {
             isAssignableFrom(RepairListViewModel::class.java) ->
                 RepairListViewModel(application)
+            isAssignableFrom(CreateRepairViewModel::class.java) ->
+            CreateRepairViewModel(application)
             else ->
                 throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
         }

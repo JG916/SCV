@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
+import com.yagr.scv.createrepair.CreateRepairFragment
 import com.yagr.scv.databinding.FragmentRepairListBinding
 import com.yagr.scv.utility.ViewModelFactory
 
@@ -25,6 +27,12 @@ class RepairListFragment : Fragment() {
             lifecycleOwner = viewLifecycleOwner
             viewmodel = viewModel
             adapter = RepairListAdapter()
+        }
+
+        binding.floatingActionButton.setOnClickListener {
+            val action = RepairListFragmentDirections
+                .actionRepairListFragmentToCreateRepairFragment()
+            it.findNavController().navigate(action)
         }
 
         return binding.root

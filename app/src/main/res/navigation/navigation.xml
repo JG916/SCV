@@ -3,12 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/directory_fragment">
+    app:startDestination="@id/repair_list_fragment">
 
         <fragment
-            android:id="@+id/directory_fragment"
+            android:id="@+id/repair_list_fragment"
             android:name="com.yagr.scv.repairlist.RepairListFragment"
             tools:layout="@layout/fragment_repair_list" >
+                <action
+                    android:id="@+id/action_repair_list_fragment_to_create_repair_fragment"
+                    app:destination="@id/create_repair_fragment" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/create_repair_fragment"
+            android:name="com.yagr.scv.createrepair.CreateRepairFragment"
+            tools:layout="@layout/fragment_create_repair" >
         </fragment>
 
 </navigation>
