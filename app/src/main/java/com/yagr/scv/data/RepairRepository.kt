@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 
 interface RepairRepository {
     fun getRepairs(): LiveData<List<Repair>>
-    fun saveRepair(repair: Repair)
+    suspend fun saveRepair(repair: Repair)
     fun deleteRepair(repair: Repair)
     fun updateRepair(repair: Repair)
 }
@@ -15,8 +15,8 @@ class RepairRepositoryImpl(private val dao: RepairDao) : RepairRepository {
         return dao.getRepairs()
     }
 
-    override fun saveRepair(repair: Repair) {
-        TODO("Not yet implemented")
+    override suspend fun saveRepair(repair: Repair) {
+        dao.insertRepair(repair)
     }
 
     override fun deleteRepair(repair: Repair) {
