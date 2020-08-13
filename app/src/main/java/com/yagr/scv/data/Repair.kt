@@ -6,7 +6,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "repairs")
 data class Repair(
-    @ColumnInfo(name = "name") val name: String
+    @ColumnInfo val name: String,
+    @ColumnInfo val description: String?
 ) {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")

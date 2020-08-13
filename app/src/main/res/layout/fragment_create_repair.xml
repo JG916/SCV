@@ -26,11 +26,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/create_repair_field_margin"
-                android:hint="@string/repair_title">
+                android:hint="@string/repair_name">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={viewmodel.name}"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -46,7 +47,8 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={viewmodel.description}"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
