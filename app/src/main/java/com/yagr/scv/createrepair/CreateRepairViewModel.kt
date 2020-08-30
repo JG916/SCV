@@ -4,12 +4,13 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.yagr.scv.data.AppDatabase
 import com.yagr.scv.data.repairs.Repair
 import com.yagr.scv.extensions.nullIfBlank
 import kotlinx.coroutines.launch
 
 class CreateRepairViewModel(application: Application) : AndroidViewModel(application) {
-    private val repairRepo = RepoCreator.createRepairRepo(application)
+    private val repairDao = AppDatabase.getInstance(application).repairDao()
 
     val name = MutableLiveData("")
     val description = MutableLiveData("")
@@ -23,7 +24,7 @@ class CreateRepairViewModel(application: Application) : AndroidViewModel(applica
         )
 
         viewModelScope.launch {
-            repairRepo.saveRepair(repair)
+            repairDao.insertRepair(repair)
             status.value = RepairCreationStatus.SUCCESS
         }
     }
