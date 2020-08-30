@@ -12,6 +12,9 @@
                 <action
                     android:id="@+id/action_repair_list_fragment_to_create_repair_fragment"
                     app:destination="@id/create_repair_fragment" />
+                <action
+                    android:id="@+id/action_repair_list_fragment_to_repairDetailFragment"
+                    app:destination="@id/repairDetailFragment" />
         </fragment>
 
         <fragment
@@ -19,5 +22,10 @@
             android:name="com.yagr.scv.createrepair.CreateRepairFragment"
             tools:layout="@layout/fragment_create_repair" >
         </fragment>
+
+        <fragment
+            android:id="@+id/repairDetailFragment"
+            android:name="com.yagr.scv.repairdetail.RepairDetailFragment"
+            android:label="RepairDetailFragment" />
 
 </navigation>
