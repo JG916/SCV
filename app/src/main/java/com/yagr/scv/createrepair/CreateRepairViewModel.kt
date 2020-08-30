@@ -15,11 +15,19 @@ class CreateRepairViewModel(application: Application) : AndroidViewModel(applica
     val name = MutableLiveData("")
     val description = MutableLiveData("")
 
-     fun createTapped() {
+    val status = MutableLiveData<RepairCreationStatus>()
+
+    fun createTapped() {
         val repair = Repair(name.value!!, description.value?.nullIfBlank())
 
-         viewModelScope.launch {
-             repairRepo.saveRepair(repair)
-         }
+        viewModelScope.launch {
+            repairRepo.saveRepair(repair)
+            status.value = RepairCreationStatus.SUCCESS
+        }
+    }
+
+    enum class RepairCreationStatus {
+        SUCCESS
+        // TODO Add ERROR
     }
 }
