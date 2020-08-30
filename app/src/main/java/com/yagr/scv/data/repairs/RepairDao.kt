@@ -9,6 +9,7 @@ import com.yagr.scv.data.repairs.Repair
 
 @Dao
 interface RepairDao {
+
     @Query("SELECT * FROM repairs")
     fun getRepairs(): LiveData<List<Repair>>
 
@@ -17,4 +18,5 @@ interface RepairDao {
 
     @Delete
     suspend fun deleteRepair(repair: Repair)
+
 }

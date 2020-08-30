@@ -5,7 +5,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.yagr.scv.data.repairs.Repair
-import com.yagr.scv.data.RepoCreator
 import com.yagr.scv.extensions.nullIfBlank
 import kotlinx.coroutines.launch
 
