@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import com.yagr.scv.data.Repair
+import com.yagr.scv.data.repairs.Repair
 import com.yagr.scv.databinding.FragmentRepairListBinding
 import com.yagr.scv.utility.ViewModelFactory
 

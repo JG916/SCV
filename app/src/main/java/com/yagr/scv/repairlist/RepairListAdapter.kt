@@ -3,7 +3,7 @@ package com.yagr.scv.repairlist
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.yagr.scv.data.Repair
+import com.yagr.scv.data.repairs.Repair
 import com.yagr.scv.databinding.ItemRepairBinding
 
 class RepairListAdapter(private val listener: RepairItemClickListener) :

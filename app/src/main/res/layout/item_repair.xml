@@ -6,7 +6,7 @@
 
         <variable
             name="repair"
-            type="com.yagr.scv.data.Repair" />
+            type="com.yagr.scv.data.repairs.Repair" />
     </data>
 
     <LinearLayout

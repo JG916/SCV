@@ -1,4 +1,4 @@
-package com.yagr.scv.data
+package com.yagr.scv.data.repairs
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

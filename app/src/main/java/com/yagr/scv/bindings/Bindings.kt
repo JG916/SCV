@@ -2,7 +2,7 @@ package com.yagr.scv.bindings
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.databinding.BindingAdapter
-import com.yagr.scv.data.Repair
+import com.yagr.scv.data.repairs.Repair
 import com.yagr.scv.repairlist.RepairListAdapter
 
 @BindingAdapter("adapter")
