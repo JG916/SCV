@@ -6,11 +6,14 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.yagr.scv.data.repairs.Repair
 import com.yagr.scv.data.repairs.RepairDao
+import com.yagr.scv.data.steps.Step
+import com.yagr.scv.data.steps.StepDao
 
 
-@Database(entities = [Repair::class], version = 1)
+@Database(entities = [Repair::class, Step::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun repairDao(): RepairDao
+    abstract fun stepDao(): StepDao
 
     companion object {
         @Volatile
