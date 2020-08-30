@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
-import com.yagr.scv.createrepair.CreateRepairFragment
+import com.yagr.scv.data.Repair
 import com.yagr.scv.databinding.FragmentRepairListBinding
 import com.yagr.scv.utility.ViewModelFactory
 
-class RepairListFragment : Fragment() {
+class RepairListFragment : Fragment(), RepairListAdapter.RepairItemClickListener {
 
     private val viewModel: RepairListViewModel by viewModels {
         ViewModelFactory(requireActivity().application, this)
@@ -26,7 +26,7 @@ class RepairListFragment : Fragment() {
         binding = FragmentRepairListBinding.inflate(inflater, container, false).apply {
             lifecycleOwner = viewLifecycleOwner
             viewmodel = viewModel
-            adapter = RepairListAdapter()
+            adapter = RepairListAdapter(this@RepairListFragment)
         }
 
         binding.floatingActionButton.setOnClickListener {
@@ -36,5 +36,8 @@ class RepairListFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onRepairClicked(repair: Repair) {
     }
 }
