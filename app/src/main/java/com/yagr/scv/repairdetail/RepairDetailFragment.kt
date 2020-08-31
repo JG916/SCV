@@ -24,6 +24,7 @@ class RepairDetailFragment : Fragment() {
         binding = FragmentRepairDetailBinding.inflate(inflater, container, false).apply {
             lifecycleOwner = viewLifecycleOwner
             viewmodel = viewModel
+            adapter = StepListAdapter()
         }
 
         return binding.root
