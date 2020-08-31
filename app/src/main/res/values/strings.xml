@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">SCV</string>
     <string name="repairs_title">Repairs</string>
-    <string name="repair_fab_content_desc">Repair Actions</string>
+    <string name="repair_fab_content_desc">Create Repair</string>
     <string name="repair_name">Name</string>
     <string name="repair_description">Description</string>
     <string name="optional_field_helper">Optional</string>
     <string name="create_action">Create</string>
+    <string name="step_fab_content_desc">Create Step</string>
 </resources>
