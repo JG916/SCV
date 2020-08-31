@@ -26,6 +26,8 @@ class StepListAdapter :
     }
 
     override fun onBindViewHolder(holder: StepViewHolder, position: Int) {
+        val step = items[position]
+        holder.binding.step = step
     }
 
     class StepViewHolder(val binding: ItemStepBinding) : RecyclerView.ViewHolder(binding.root)

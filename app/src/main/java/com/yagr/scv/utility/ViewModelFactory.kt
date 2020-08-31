@@ -28,7 +28,7 @@ class ViewModelFactory constructor(
             isAssignableFrom(CreateRepairViewModel::class.java) ->
                 CreateRepairViewModel(application)
             isAssignableFrom(RepairDetailViewModel::class.java) ->
-                RepairDetailViewModel(application)
+                RepairDetailViewModel(application, handle)
             else ->
                 throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
         }

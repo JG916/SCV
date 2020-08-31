@@ -9,7 +9,7 @@ import androidx.room.Query
 @Dao
 interface StepDao {
     @Query("SELECT * FROM steps WHERE repairId = :repairId")
-    fun getStepsForRepair(repairId: String): LiveData<List<Step>>
+    fun getStepsForRepair(repairId: Long): LiveData<List<Step>>
 
     @Insert
     suspend fun insertStep(step: Step): Long

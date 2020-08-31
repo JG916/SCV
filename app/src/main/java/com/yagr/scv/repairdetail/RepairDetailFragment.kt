@@ -6,13 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
 import com.yagr.scv.databinding.FragmentRepairDetailBinding
 import com.yagr.scv.utility.ViewModelFactory
 
 class RepairDetailFragment : Fragment() {
 
+    private val args: RepairDetailFragmentArgs by navArgs()
+
     private val viewModel: RepairDetailViewModel by viewModels {
-        ViewModelFactory(requireActivity().application, this)
+        ViewModelFactory(requireActivity().application, this, args.toBundle())
     }
 
     lateinit var binding: FragmentRepairDetailBinding

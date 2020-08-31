@@ -1,5 +1,6 @@
 package com.yagr.scv.bindings
 
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.databinding.BindingAdapter
 import com.yagr.scv.data.repairs.Repair
@@ -24,4 +25,9 @@ fun bindSteps(view: RecyclerView, items: List<Step>?) {
     items?.let {
         (view.adapter as StepListAdapter).updateItems(items)
     }
+}
+
+@BindingAdapter("stepParts")
+fun bindStepParts(view: TextView, parts: List<String>?) {
+    view.text = parts?.joinToString()
 }

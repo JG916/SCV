@@ -40,7 +40,7 @@ class RepairListFragment : Fragment(), RepairListAdapter.RepairItemClickListener
 
     override fun onRepairClicked(repair: Repair) {
         val action = RepairListFragmentDirections
-            .actionRepairListFragmentToRepairDetailFragment()
+            .actionRepairListFragmentToRepairDetailFragment(repair.repairId)
         findNavController().navigate(action)
     }
 }
