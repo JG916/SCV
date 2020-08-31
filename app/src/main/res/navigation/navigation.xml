@@ -30,6 +30,14 @@
                 <argument
                     android:name="repairId"
                     app:argType="long"/>
+                <action
+                    android:id="@+id/action_repairDetailFragment_to_createStepFragment"
+                    app:destination="@id/createStepFragment" />
         </fragment>
+
+        <fragment
+            android:id="@+id/createStepFragment"
+            android:name="com.yagr.scv.createstep.CreateStepFragment"
+            android:label="CreateStepFragment" />
 
 </navigation>

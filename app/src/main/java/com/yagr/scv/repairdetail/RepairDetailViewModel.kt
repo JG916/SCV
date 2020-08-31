@@ -4,7 +4,6 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.SavedStateHandle
 import com.yagr.scv.data.AppDatabase
-import com.yagr.scv.data.steps.Step
 
 class RepairDetailViewModel(application: Application, savedStateHandle: SavedStateHandle) : AndroidViewModel(application) {
     private val stepDao = AppDatabase.getInstance(application).stepDao()

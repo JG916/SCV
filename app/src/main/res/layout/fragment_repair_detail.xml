@@ -28,7 +28,9 @@
             app:adapter="@{adapter}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            app:stepItems="@{viewmodel.steps}" />
+            app:stepItems="@{viewmodel.steps}"
+            tools:listitem="@layout/item_step"
+            />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floating_action_button"

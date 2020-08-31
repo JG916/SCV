@@ -7,6 +7,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.savedstate.SavedStateRegistryOwner
 import com.yagr.scv.createrepair.CreateRepairViewModel
+import com.yagr.scv.createstep.CreateStepViewModel
 import com.yagr.scv.repairdetail.RepairDetailViewModel
 import com.yagr.scv.repairlist.RepairListViewModel
 
@@ -29,6 +30,8 @@ class ViewModelFactory constructor(
                 CreateRepairViewModel(application)
             isAssignableFrom(RepairDetailViewModel::class.java) ->
                 RepairDetailViewModel(application, handle)
+            isAssignableFrom(CreateStepViewModel::class.java) ->
+                CreateStepViewModel(application)
             else ->
                 throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
         }
